@@ -1,5 +1,6 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import StudentList from './StudentList';
 
 const students = [
   {
@@ -63,9 +64,11 @@ const students = [
 ]
 
 function App() {
+  const [studentData, setStudentData] = useState(students)
+
   return (
     <div className="App">
-    
+      <StudentList students={studentData}/>
     </div>
   );
 }
