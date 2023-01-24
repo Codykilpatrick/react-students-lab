@@ -8,9 +8,14 @@ const Score = (props) => {
     setCurrScore(currScore + 1)
   }
 
+  function handleDecrease() {
+    setCurrScore(currScore - 1)
+  }
+
   return (
     <>
     <button onClick={handleIncrease}>+1</button>
+    <button onClick={handleDecrease}>-1</button>
     <div>{ currScore} on { props.score.date }</div>
     </>
   )
